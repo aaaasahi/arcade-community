@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useHistory } from "react-router-dom";
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import TextField from "@material-ui/core/TextField";
@@ -42,6 +43,7 @@ export const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [values, setValues] = useState({ showPassword: false });
+  const history = useHistory();
 
   const handleClickShowPassword = () => {
     setValues({ ...values, showPassword: !values.showPassword });
@@ -70,7 +72,7 @@ export const Login = () => {
           uid: response.data.data.uid,
         })
       );
-      window.location = "/";
+      history.push('/community');
     });
   };
 
