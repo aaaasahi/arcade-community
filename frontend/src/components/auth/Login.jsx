@@ -72,7 +72,7 @@ export const Login = () => {
           uid: response.data.data.uid,
         })
       );
-      history.push('/community');
+      history.push("/community");
     });
   };
 
@@ -80,7 +80,7 @@ export const Login = () => {
     <Container component="main" maxWidth="sm">
       <CssBaseline />
       <Card className={classes.paper}>
-        <CardContent className={classes.card}>
+        <CardContent>
           <Typography component="h1" variant="h4">
             Login
           </Typography>

@@ -99,7 +99,7 @@ export const Signup = () => {
     <Container component="main" maxWidth="sm">
       <CssBaseline />
       <Card className={classes.paper}>
-        <CardContent className={classes.card}>
+        <CardContent>
           <Typography component="h1" variant="h4">
             Signup
           </Typography>
