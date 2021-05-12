@@ -1,12 +1,14 @@
 import './App.css';
+import { BrowserRouter } from "react-router-dom";
 
-import { Login } from './components/auth/Login'
-import { Signup } from './components/auth/Signup'
+import { Router } from './Router.jsx'
 
 function App() {
   return (
     <div>
-      <Signup />
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
     </div>
   );
 }
