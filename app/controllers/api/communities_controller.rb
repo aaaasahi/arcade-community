@@ -31,6 +31,6 @@ class Api::CommunitiesController < ApplicationController
   private
 
   def community_params
-    params.require(:community).permit(:title, :text).merge(user: current_user)
+    params.permit(:title, :text).merge(user: current_user)
   end
 end

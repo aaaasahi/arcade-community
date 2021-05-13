@@ -5,6 +5,7 @@ import { Signup } from './components/auth/Signup'
 import { IndexCommunity } from './components/community/IndexCommunity'
 import { Profile } from './components/profile/Profile'
 import { IndexEvent } from './components/event/IndexEvent'
+import { CreateCommunity } from "./components/community/CreateCommunity"
 
 
 export const Router = () => {
@@ -12,6 +13,7 @@ export const Router = () => {
   return (
     <Switch>
       <Route exact path={"/", "/community" } component={IndexCommunity} />
+      <Route exact path={"/community/new"} component={CreateCommunity} />
       <Route exact path="/login">
         {currentUser ? <Redirect to="/" /> : <Login />}
       </Route>
